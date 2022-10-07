@@ -15,7 +15,7 @@ This guide helps you configure tests using Sentinel to govern your Terraform sta
 
 4. Fork this repo. Create a new workspace and choose the Version control workflow. Point your workspace at the forked repo.
 5. Run a terraform apply within your workspace dashboard.
-\
+<p><br></p>
 ![imgur](https://i.imgur.com/ViLGcWH.png)
 
 ## Configuring Sentinel
