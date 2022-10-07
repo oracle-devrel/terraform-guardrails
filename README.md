@@ -2,22 +2,36 @@
 
 [![License: UPL](https://img.shields.io/badge/license-UPL-green)](https://img.shields.io/badge/license-UPL-green) [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=oracle-devrel_terraform-guardrails)](https://sonarcloud.io/dashboard?id=oracle-devrel_terraform-guardrails)
 
-## THIS IS A NEW, BLANK REPO THAT IS NOT READY FOR USE YET.  PLEASE CHECK BACK SOON!
-
 ## Introduction
-MISSING
+This guide helps you configure tests using Sentinel to govern your Terraform stacks.
 
 ## Getting Started
-MISSING
+1. Login to app.terraform.io
+2. Go to the [tutorial on setting up Terraform Cloud](https://learn.hashicorp.com/tutorials/terraform/cloud-sign-up?in=terraform/cloud-get-started).
+3. Follow the steps up until the [input variable set](https://learn.hashicorp.com/tutorials/terraform/cloud-create-variable-set?in=terraform/cloud-get-started) section. Populate your ocid, fingerprint, region, tenancy ocid, and private key by gathering the inputs from your OCI Console. For the private key, download a private key pem file and input the contents of the file as the value.
+4. Fork this repo. Create a new workspace and choose between using the CLI driven workflow or the VCS workflow. For the CLI workflow you can input values for your TFC organization and your eventual workspace name in the providers.tf file. For the VCS workflow you can integrate TFC (Terraform Cloud) with your repo.
+5. Input your organization and workspace names in the providers.tf file.
+6. Run a terraform plan either locally or in your workspace dashboard.
+
+## Configuring Sentinel
+
+1. Following the [enforce policy set guide](https://learn.hashicorp.com/tutorials/terraform/policy-quickstart?in=terraform/cloud-get-started) click connect new policy set.
+2. Select your repo again and for the path enter "oci" since that is the name of the directory where the tests live.
+3. Select "Policies enforced on select workspaces" and specify your new workspace from the dropdown. Click the connect policy set button.
+4. Try running a plan and apply on your Terraform code. You can modify your tests [enforcement levels](https://docs.hashicorp.com/sentinel/concepts/enforcement-levels) in the sentinel.hcl file. See how the tests behave when you remove tags from your resources or run a `terraform plan` after deleting resources from the `prohibited_list` (within the deletion.sentinel file).
+5. Try adding additional checks i.e  [validate-variables-have-descriptions.sentinel](https://github.com/hashicorp/terraform-sentinel-policies/blob/main/cloud-agnostic/validate-variables-have-descriptions.sentinel).
 
 ### Prerequisites
-MISSING
+* A Terraform Cloud Login
+* An OCI Account
+* An Oracle Cloud ocid, fingerprint, tenancy ocid, and private key.
 
 ## Notes/Issues
-MISSING
+* Sentinel is one of many Policy-as-Code frameworks and requires an account tier that costs $70/mo within Terraform Cloud. As an alternative, you can also try using OPA (Open Policy Agent) which is open source and free to use.
 
 ## URLs
-* Nothing at this time
+* https://cloud.oracle.com
+* https://app.terraform.io
 
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
