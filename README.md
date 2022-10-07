@@ -9,13 +9,11 @@ This guide helps you configure tests using Sentinel to govern your Terraform sta
 ## Getting Started
 1. Login to [app.terraform.io](https://app.terraform.io)
 2. Go to the [tutorial on setting up Terraform Cloud](https://learn.hashicorp.com/tutorials/terraform/cloud-sign-up?in=terraform/cloud-get-started).
-3. Follow the steps up until the [input variable set](https://learn.hashicorp.com/tutorials/terraform/cloud-create-variable-set?in=terraform/cloud-get-started) section. Populate your ocid, fingerprint, region, tenancy ocid, and private key by gathering the inputs from your OCI Console. For the private key, download a private key pem file and input the contents of the file as the value.   
-\
+3. Follow the steps up until the [input variable set](https://learn.hashicorp.com/tutorials/terraform/cloud-create-variable-set?in=terraform/cloud-get-started) section. Populate your ocid, fingerprint, region, tenancy ocid, and private key by gathering the inputs from your OCI Console. For the private key, download a private key pem file and input the contents of the file as the value. \
 ![Imgur](https://i.imgur.com/0AUho5b.png)
 
 4. Fork this repo. Create a new workspace and choose the Version control workflow. Point your workspace at the forked repo.
-5. Run a terraform apply within your workspace dashboard.
-<p><br></p>
+5. Run a terraform apply within your workspace dashboard. \
 ![imgur](https://i.imgur.com/ViLGcWH.png)
 
 ## Configuring Sentinel
