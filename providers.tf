@@ -1,18 +1,3 @@
-terraform {
-  cloud {
-    organization = "###"
-
-    workspaces {
-      name = "###"
-    }
-  }
-  required_providers {
-    oci = {
-      source = "hashicorp/oci"
-    }
-  }
-} 
-
 provider "oci" {
   tenancy_ocid     = var.tenancy_ocid
   user_ocid        = var.user_ocid
