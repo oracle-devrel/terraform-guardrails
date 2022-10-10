@@ -21,7 +21,7 @@ This guide helps you configure tests using Sentinel to govern your Terraform sta
 1. Referencing the [enforce policy set guide](https://learn.hashicorp.com/tutorials/terraform/policy-quickstart?in=terraform/cloud-get-started) go to settings, select `policy sets`, and click `connect new policy set`.
 2. Select your forked repo again and for the path enter "oci" since that is the name of the directory where the tests live.
 3. Select "Policies enforced on select workspaces" and specify your new workspace from the dropdown. Click the connect policy set button.
-4. Try running a plan and apply on your Terraform code. You can modify your tests [enforcement levels](https://docs.hashicorp.com/sentinel/concepts/enforcement-levels) in the sentinel.hcl file. See how the tests behave when you remove tags from your resources or run a `terraform plan` after deleting resources from the `prohibited_list` (within the deletion.sentinel file).
+4. Try running a plan and apply on your Terraform code. You can modify your tests [enforcement levels](https://docs.hashicorp.com/sentinel/concepts/enforcement-levels) in the [sentinel.hcl](oci/sentinel.hcl) file. See how the tests behave when you remove tags from your resources or run a `terraform plan` after deleting resources from the `prohibited_list` (within the deletion.sentinel file).
 5. Try adding additional checks i.e  [validate-variables-have-descriptions.sentinel](https://github.com/hashicorp/terraform-sentinel-policies/blob/main/cloud-agnostic/validate-variables-have-descriptions.sentinel).
 
 ### Prerequisites
