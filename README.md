@@ -30,7 +30,7 @@ This guide helps you configure tests using Sentinel to govern your Terraform sta
 * An Oracle Cloud ocid, fingerprint, tenancy ocid, and private key
 
 ## Notes/Issues
-* Sentinel is one of many Policy-as-Code frameworks and requires a Terraform Cloud account tier that costs $70/mo.
+* Sentinel requires a Team & Governance Terraform Cloud account.
 * Once done with the tutorial, go ahead and [tear down your resources](https://learn.hashicorp.com/tutorials/terraform/cloud-destroy).
 
 ## URLs
